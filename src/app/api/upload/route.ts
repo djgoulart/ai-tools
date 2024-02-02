@@ -21,7 +21,9 @@ export async function POST(request: Request) {
 
     console.log(chalk.green(`Success generating upload URL!`))
 
-    return NextResponse.json({ url: signedUrl })
+    const response = NextResponse.json({ url: signedUrl })
+    console.log(chalk.yellow(`returning response`, response))
+    return response
   } catch (err) {
     console.log('error')
   }

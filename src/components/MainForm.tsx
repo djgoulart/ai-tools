@@ -9,7 +9,7 @@ import { Video } from '@/hooks/useVideos'
 import { Mic2 } from 'lucide-react'
 
 const defaultTranscriptionPrompt = [
-  'Esse vídeo faz parte de um curso sobre design de software utilizando Node.js e conceitos de Domain-Driven Design. Algumas tecnologias e termos mencionados no vídeo são: JavaScript, TypeScript, WatchedList, Vitest e Aggregates.',
+  'Esse vídeo faz parte de uma aula sobre finanças pessoais e fala sobre como uma pessoa deveria gerenciar o seu dinheiro. Como uma pessoa deveria dividir o seu patrimônio, como os ricos gerenciam a grana deles e o porque a pessoa deveria fazer o mesmo.',
 ].join('\n')
 
 // const defaultSummaryPrompt = [
@@ -50,7 +50,7 @@ export function MainForm() {
     await fetch('/api/ai/transcribe', {
       method: 'POST',
       body: JSON.stringify({
-        videoKeys: uploadedVideoKey,
+        videoKey: 'ffce1fba-ab31-4daf-b26d-a3ed0704f21c.mp4',
       }),
     }).then((response) => response.json())
 

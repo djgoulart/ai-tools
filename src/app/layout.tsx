@@ -6,7 +6,7 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'AI Tools | Rocketseat',
+  title: 'AI Tools',
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
